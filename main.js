@@ -44,14 +44,14 @@ scene.add(wireframe);
 
 var sky = new StarMap(STARS.hipstars);
 
-// var n = 9;
-// var map = smooth(smooth(diamondSquare(n), 20), 3);
-// var geometry = getSquareMesh(map, n);
-// var material = new THREE.MeshPhongMaterial( { vertexColors: THREE.FaceColors } );
-// material.depthTest = false;
-// var mesh = new THREE.Mesh(geometry, material);
-// // mesh.geometry.computeVertexNormals();
-// scene.add(mesh);
+var n = 9;
+var map = smooth(smooth(diamondSquare(n), 20), 3);
+var geometry = getSquareMesh(map, n);
+var material = new THREE.MeshPhongMaterial( { vertexColors: THREE.FaceColors } );
+material.depthTest = false;
+var mesh = new THREE.Mesh(geometry, material);
+// mesh.geometry.computeVertexNormals();
+scene.add(mesh);
 
 //////////////////////////////////////////////////////////////////////////////////
 //		Rendering
