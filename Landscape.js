@@ -5,7 +5,6 @@ class Landscape {
 		this.gridsize = gridsize;
 
 		this.diamondSquare();
-		this.smooth(20);
 		this.smooth(3);
 		this.getSquareMesh(this.map, n);
 
@@ -16,17 +15,25 @@ class Landscape {
 		this.mesh.geometry.computeVertexNormals();
 
 		scene.add(this.mesh);
+
+		// var geometry = new THREE.WireframeGeometry(this.mesh.geometry);
+		// var material = new THREE.LineBasicMaterial({ color: 0xff6400, linewidth: 3});
+		// var wireframe = new THREE.LineSegments(geometry, material);
+		// scene.add(wireframe);
 	}
 
 	diamondSquare() {
 		const BASEMOD = 400;
+		// const TAPER = (modifier, step) => {
+	    //     if (step >= this.n-3) {
+	    //         return 0;
+	    //     } else {
+	    //         return modifier / 1.45;
+	    //     };
+	    // };
 		const TAPER = (modifier, step) => {
-	        if (step >= this.n-3) {
-	            return 0;
-	        } else {
-	            return modifier / 1.45;
-	        };
-	    };
+			return modifier / 1.45
+		};
 
 		var modifier = BASEMOD;
 

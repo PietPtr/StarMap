@@ -31,10 +31,10 @@ document.body.addEventListener( 'click', function ( event ) {
 //////////////////////////////////////////////////////////////////////////////////
 
 // Sphere shows 30 segments, so 6 degrees per segment (180 / 30 = 6)
-var sphereGeometry = new THREE.SphereGeometry( 15, 30, 30 );
-var geometry = new THREE.EdgesGeometry(sphereGeometry);
-var material = new THREE.LineBasicMaterial({ color: 0x333333, linewidth: 1});
-var wireframe = new THREE.LineSegments(geometry, material);
+// var sphereGeometry = new THREE.SphereGeometry( 15, 30, 30 );
+// var geometry = new THREE.EdgesGeometry(sphereGeometry);
+// var material = new THREE.LineBasicMaterial({ color: 0x333333, linewidth: 1});
+// var wireframe = new THREE.LineSegments(geometry, material);
 // scene.add(wireframe);
 
 var stars = new StarMap(STARS.hipstars);
